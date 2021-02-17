@@ -1,0 +1,17 @@
+@mixin section-padding {
+  padding: 5vh 10vw;
+}
+
+@mixin card--basic{
+  margin: $margin;
+  padding: $padding;
+  border-radius: 5px;
+  background-color: rgba(245, 245, 245, 0.514);
+}
+@mixin view--basic{
+  @include section-padding;
+  background-color: $color-font--light;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: row-reverse;
+}

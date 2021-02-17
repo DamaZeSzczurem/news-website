@@ -1,0 +1,18 @@
+.home{
+  @include view--basic;
+  flex-direction: row-reverse;
+
+  &_posts-container{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+  }
+
+  &_single-post{
+    @include card--basic;
+    
+  }
+  .heading{
+    color: $color-font--dark;
+  }
+}

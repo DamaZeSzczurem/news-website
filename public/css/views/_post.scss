@@ -1,0 +1,6 @@
+.single-post{
+  @include view--basic;
+  &_article{
+    @include card--basic;
+  }
+}

@@ -1,0 +1,10 @@
+.backnav{
+  width: 40%;
+  &_start-content{
+    @include card--basic;
+    border-top: solid $color--main 4vh;
+  }
+  &_popular{
+    @include card--basic;
+  }
+}

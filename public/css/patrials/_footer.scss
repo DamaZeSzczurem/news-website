@@ -1,0 +1,9 @@
+.footer{
+  @include section-padding;
+  background-color: $color--main;
+  display: relative;
+  bottom: 0;
+  .text{
+    text-align: center;
+  }
+}

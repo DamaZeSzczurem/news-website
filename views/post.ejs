@@ -1,0 +1,23 @@
+<%-include('patrials/header')%>
+ <section class="single-post">
+  <%- include('patrials/backnav', {content:content, postsSorted:postsSorted})%>
+
+  <article class="single-post_article">
+    <h3 class="heading--medium">
+      <%= post.title %>
+    </h3>
+    <p class="text single-post_date">
+    <%= post.date.getHours() %>:<%= ('0'+post.date.getMinutes()).slice(-2) %> 
+    <%= post.date.getDate() %>/<%= (post.date.getMonth())+1%>/<%= post.date.getFullYear()%>
+    </p>
+    <p class="text single-post_content">
+      <%= post.content %>
+    </p>
+    <p class="single-post_author">
+      Autor: <%= post.author %>
+    </p>
+
+    <p>Views:<%=post.views%> </p>
+  </article>
+</section>
+<%-include('patrials/footer')%> 

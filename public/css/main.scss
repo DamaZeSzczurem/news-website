@@ -1,0 +1,25 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+/*utils*/
+@import './utils/variables';
+@import './utils/mixin';
+@import './utils/fonts';
+
+/*patrials*/
+@import './patrials/header';
+@import './patrials/backnav';
+@import './patrials/footer';
+
+/*views*/
+@import './views/post';
+@import './views/contact';
+@import './views/compose';
+@import './views/about';
+@import './views/home';
+
+

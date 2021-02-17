@@ -1,0 +1,48 @@
+.compose{
+  @include view--basic;
+  align-items: center;
+  justify-content: center;
+  &_section{
+    @include card--basic;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    h1{
+      align-self: flex-start;
+    }
+    form{
+      display: flex;
+      flex-direction: column;
+      height: 80%;
+      *{
+        margin-bottom: $margin;
+      }
+      input{
+        width: 50%;
+        background-color: $color-font--light;
+        border-style: solid;
+        border-color: $color--main;
+        border-radius: 5px;
+        height: 2*$font-size--text--normal;
+        padding: $padding;
+      }
+      textarea{
+        width: 100%;
+        background-color: $color-font--light;
+        border-style: solid;
+        border-color: $color--main;
+        border-radius: 5px;
+      }
+      .btn{
+        background-color: $color--main;
+        color: $color-font--light;
+        border-color: $color--main;
+        width: 30%;
+        height: 4*$font-size--text--normal;
+        border-radius: 5px;
+        align-self: flex-end;
+      }
+    }
+    
+  }
+}

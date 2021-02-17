@@ -1,0 +1,20 @@
+/* Fonts properties */
+
+.heading{
+  font-family: 'Lora', serif;
+  &--big{
+    font-size: $font-size-header--big;
+  }
+  &--medium{
+    font-size: $font-size-header--medium;
+  }
+  &--small{
+    font-size: $font-size-header--medium;
+  }
+}
+
+.text{
+  font-family: 'Lato', sans-serif;
+  line-height: 1.5;
+  letter-spacing: 1px;
+}

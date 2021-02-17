@@ -1,0 +1,14 @@
+<section class="backnav">
+  <div class="backnav_start-content">
+    <h2 class="heading heading--big">Home</h2>
+    <p class="text"><%= content %></p>
+  </div>
+  <div class="backnav_popular">
+    <h2 class="heading heading--big">Trending:</h2>
+    <% for( let index = 0; index < postsSorted.length; index++ ) { %>
+      <div class="popular_post">
+        <%= postsSorted[index].title%> 
+      </div>
+    <% } %>
+  </div>
+</section>

@@ -1,0 +1,20 @@
+.contact{
+  @include view--basic;
+  &_section{
+    @include card--basic;
+    display: flex;
+    width: 70%;
+    height: 50vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column;
+    text-align: center;
+
+    p{
+      width: 70%;
+    }
+    *{
+      padding: $padding;
+    }
+  }
+}
