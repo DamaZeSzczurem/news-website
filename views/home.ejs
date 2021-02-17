@@ -5,20 +5,24 @@
   <section class="home_posts-container">
     <% for( let index = 0; index < posts.length; index++ ) { %>
       <article class="home_single-post">
-        <h2 class="heading heading--small">
-          <%= posts[index].title %>
-        </h2>
-        <img src="<%= posts[index].image %>"/>
-        <p class="text home_text">
-        <%= posts[index].date.getHours() %>:<%= ('0'+posts[index].date.getMinutes()).slice(-2) %>
-        <%= posts[index].date.getDate() %>/<%= (posts[index].date.getMonth())+1%>/<%= posts[index].date.getFullYear()%>
-        </p>
-        <p class="text home_text">
-          <%= posts[index].content.substring(0, 200) %> <a class="home_read-more" href="/post/<%=posts[index].postId%> ">czytaj więcej...</a>
-        </p>
-        <p class="text home_text">
-          Autor: <%= posts[index].author %>
-        </p>
+        <div class="single-post_image">
+          <img src="./uploads/images/<%= posts[index].image %>"/>
+        </div>
+        <div class="single-post_text">
+          <h2 class="heading heading--small">
+            <%= posts[index].title %>
+          </h2>
+          <p class="text text--small">
+          <%= posts[index].date.getHours() %>:<%= ('0'+posts[index].date.getMinutes()).slice(-2) %>
+          <%= posts[index].date.getDate() %>/<%= (posts[index].date.getMonth())+1%>/<%= posts[index].date.getFullYear()%>
+          </p>
+          <p class="text">
+            <%= posts[index].content.substring(0, 250) %> <a class="home_read-more" href="/post/<%=posts[index].postId%> ">czytaj więcej...</a>
+          </p>
+          <p class="text text_author text--small">
+            Autor: <%= posts[index].author %>
+          </p>
+        </div>
       </article>
     <% } %>
   </section>

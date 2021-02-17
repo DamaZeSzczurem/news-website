@@ -1,18 +1,31 @@
 .home{
   @include view--basic;
-  flex-direction: row-reverse;
-
   &_posts-container{
     display: flex;
     flex-direction: column;
-    width: 60%;
+    width: 70%; 
+    align-items: center;
   }
-
   &_single-post{
     @include card--basic;
-    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
-  .heading{
-    color: $color-font--dark;
+  .single-post{
+    &_image{
+      width: 40%;
+      img{
+        width: 100%;
+      }
+    }
+    &_text{
+      width: 60%;
+      .text{
+        margin-bottom: $margin;
+      &_author{
+        text-align: right;}
+      }
+    }
   }
 }

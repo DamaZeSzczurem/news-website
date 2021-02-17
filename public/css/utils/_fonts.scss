@@ -2,6 +2,8 @@
 
 .heading{
   font-family: 'Lora', serif;
+  color: $color-font--dark;
+  
   &--big{
     font-size: $font-size-header--big;
   }
@@ -17,4 +19,9 @@
   font-family: 'Lato', sans-serif;
   line-height: 1.5;
   letter-spacing: 1px;
+  font-size:$font-size--text--normal;
+  &--small{
+    font-size:$font-size--text--small;
+    color: grey;
+  }
 }

@@ -2,15 +2,15 @@
 <div class="compose">
   <section class="compose_section">
     <h1 class="heading--big">Utwórz</h1> 
-    <form class="compose_form" action="/compose" method="POST">
+    <form class="compose_form" action="/compose" method="POST" enctype="multipart/form-data">
       <label for="title" class="text">Tytuł</label>
-        <input type="text" name="title">
+        <input class="form_input" type="text" name="title">
       <label for="content" class="text">Post:</label>
         <textarea rows="40" cols="100" class="form-control" type="text" name="content"></textarea>
       <label for="img" class="text">Zdjęcie:</label>
-        <input type="file" id="image" name="image" accept="image/*"> 
+        <input type="file" id="image" name="image" accept="image/*" > 
       <label for="author" class="text">Autor:</label>
-        <input type="text" name="author">
+        <input class="form_input" type="text" name="author">
       <button class="btn" type="submit">Opublikuj</button>
     </form>
   </section>
