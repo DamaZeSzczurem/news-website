@@ -6,9 +6,26 @@
   }
   &_popular{
     @include card--basic;
+    a{
+      text-decoration: none;
+    }
     .popular{
       &_post{
         @include card--basic;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        img{
+          border-radius: 100%;
+          height: 10vh;
+          width: 10vh;
+          object-fit: cover;
+          object-position: center;
+        }
+        .heading{
+          margin-left: $margin;
+          
+        }
       }
     }
   }

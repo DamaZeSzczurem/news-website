@@ -6,9 +6,12 @@
   <div class="backnav_popular">
     <h2 class="heading heading--big">Trending:</h2>
     <% for( let index = 0; index < postsSorted.length; index++ ) { %>
+    <a href="../post/<%=postsSorted[index].postId%>">
       <div class="popular_post">
-        <%= postsSorted[index].title%> 
+        <img src="../uploads/images/<%= postsSorted[index].image %>"/>
+        <h4 class="heading heading--small"><%= postsSorted[index].title%></h4>
       </div>
+    </a> 
     <% } %>
   </div>
 </section>

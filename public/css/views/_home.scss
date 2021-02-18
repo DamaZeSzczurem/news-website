@@ -8,6 +8,7 @@
   }
   &_single-post{
     @include card--basic;
+    padding: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -21,6 +22,7 @@
     }
     &_text{
       width: 60%;
+      margin: $margin;
       .text{
         margin-bottom: $margin;
       &_author{
