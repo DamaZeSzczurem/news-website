@@ -3,5 +3,9 @@
   &_article{
     @include card--basic;
     width: 70%;
+    transition: all 1s;
+    @include respond (medium){
+      width:100%;
+    }
   }
 }

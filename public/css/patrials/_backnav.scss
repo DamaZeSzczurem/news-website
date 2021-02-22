@@ -1,5 +1,6 @@
 .backnav{
   width:30%;
+  visibility: visible;
   &_start-content{
     @include card--basic;
     border-top: solid $color--main 4vh;
@@ -10,6 +11,7 @@
       text-decoration: none;
     }
     .popular{
+      
       &_post{
         @include card--basic;
         display: flex;
@@ -26,7 +28,16 @@
           margin-left: $margin;
           
         }
+        &:hover{
+          .heading{
+          color: indigo;
+          }
+        }
       }
     }
   }
+ @include respond (medium){
+   visibility: hidden;
+ }
+
 }

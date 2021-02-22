@@ -3,18 +3,39 @@
   &_section{
     @include card--basic;
     display: flex;
-    width: 70%;
     height: 50vh;
-    justify-content: center;
-    align-items: center;
-    flex-direction:column;
-    text-align: center;
-
-    p{
-      width: 70%;
-    }
+    flex-direction: row;
+    text-align: left;
     *{
       padding: $padding;
+    }
+  }
+  &_text{
+    width: 50%;
+    
+    .heading{
+      padding-top: 0;
+    }
+  }
+  &_form{
+    display: flex;
+    width:50%;
+    flex-direction: column;
+    margin-top: $margin;
+    label{
+      padding: 0.5*$padding;
+    }
+    input{
+      @include input--basic;
+      margin-bottom: $margin;
+    }
+    textarea{
+      @include textarea--basic;
+    }
+    button{
+      @include button--submit;
+      align-self: flex-end;
+      margin-top:$margin;
     }
   }
 }

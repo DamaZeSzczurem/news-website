@@ -2,8 +2,19 @@
 <div class="contact">
   <%- include('patrials/backnav', {content:content, postsSorted:postsSorted})%>
   <section class="contact_section">
-    <h1 class="heading heading--big">Contact us</h1> 
-    <p class="text"><%=contactContent%></p>
+    <div class="contact_text">
+      <h1 class="heading heading--big">Contact us</h1> 
+      <p class="text"><%=contactContent%></p>
+    </div>
+      <form class="contact_form" action="/contact" method="post">
+        <label for="username">Imię i Nazwisko</label>
+        <input type="text" name="username" placeholder="Jan Kowalski"/>
+        <label for="issue">Tytuł</label>
+        <input type="text" name="issue" placeholder="Chęć Współpracy">
+        <label for="issueText">Treść wiadomości:</label>
+        <textarea rows="25" name="issueText" placeholder="Szanowna Redakcjo, piszę do Was..."></textarea>
+        <button type="submit">Wyślij</button>
+      </form>
   </section>
 </div>
 <%- include('patrials/footer') %> 

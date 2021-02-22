@@ -12,6 +12,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    &:hover{
+      .heading--small{
+      color: indigo;
+      }
+    }
   }
   .single-post{
     &_image{
