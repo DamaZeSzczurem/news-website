@@ -2,6 +2,7 @@
   @include view--basic;
   &_section{
     @include card--basic;
+    width: auto;
     display: flex;
     height: 50vh;
     flex-direction: row;

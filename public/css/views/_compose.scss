@@ -4,6 +4,7 @@
   justify-content: center;
   &_section{
     @include card--basic;
+    width: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;

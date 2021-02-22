@@ -51,7 +51,7 @@
 }
 
 .top .nav {
-  padding: 5vh 10vw;
+  padding: 5vh 5vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -72,8 +72,8 @@
 }
 
 .backnav {
-  width: 30%;
   visibility: visible;
+  position: static;
 }
 
 .backnav_start-content {
@@ -81,6 +81,7 @@
   padding: 1.5vh;
   border-radius: 5px;
   background-color: rgba(245, 245, 245, 0.514);
+  width: 30vw;
   border-top: solid #5daa68 4vh;
 }
 
@@ -89,6 +90,7 @@
   padding: 1.5vh;
   border-radius: 5px;
   background-color: rgba(245, 245, 245, 0.514);
+  width: 30vw;
 }
 
 .backnav_popular a {
@@ -132,11 +134,12 @@
 @media only screen and (max-width: 1250px) {
   .backnav {
     visibility: hidden;
+    position: absolute;
   }
 }
 
 .footer {
-  padding: 5vh 10vw;
+  padding: 5vh 5vw;
   background-color: #5daa68;
   display: relative;
   bottom: 0;
@@ -148,7 +151,7 @@
 
 /*views*/
 .single-post {
-  padding: 5vh 10vw;
+  padding: 5vh 5vw;
   background-color: #faf1cf;
   min-height: 80vh;
   display: -webkit-box;
@@ -165,19 +168,10 @@
   padding: 1.5vh;
   border-radius: 5px;
   background-color: rgba(245, 245, 245, 0.514);
-  width: 70%;
-  -webkit-transition: all 1s;
-  transition: all 1s;
-}
-
-@media only screen and (max-width: 1250px) {
-  .single-post_article {
-    width: 100%;
-  }
 }
 
 .contact {
-  padding: 5vh 10vw;
+  padding: 5vh 5vw;
   background-color: #faf1cf;
   min-height: 80vh;
   display: -webkit-box;
@@ -194,6 +188,7 @@
   padding: 1.5vh;
   border-radius: 5px;
   background-color: rgba(245, 245, 245, 0.514);
+  width: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -275,7 +270,7 @@
 }
 
 .compose {
-  padding: 5vh 10vw;
+  padding: 5vh 5vw;
   background-color: #faf1cf;
   min-height: 80vh;
   display: -webkit-box;
@@ -298,6 +293,7 @@
   padding: 1.5vh;
   border-radius: 5px;
   background-color: rgba(245, 245, 245, 0.514);
+  width: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -370,7 +366,7 @@
 }
 
 .about {
-  padding: 5vh 10vw;
+  padding: 5vh 5vw;
   background-color: #faf1cf;
   min-height: 80vh;
   display: -webkit-box;
@@ -390,7 +386,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 70%;
+  width: auto;
   height: 50vh;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -414,7 +410,7 @@
 }
 
 .home {
-  padding: 5vh 10vw;
+  padding: 5vh 5vw;
   background-color: #faf1cf;
   min-height: 80vh;
   display: -webkit-box;
@@ -427,17 +423,9 @@
 }
 
 .home_posts-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  width: 70%;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  width: auto;
 }
 
 .home_single-post {
@@ -455,10 +443,17 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: auto;
 }
 
 .home_single-post:hover .heading--small {
   color: indigo;
+}
+
+@media only screen and (max-width: 1250px) {
+  .home_single-post {
+    width: 90vw;
+  }
 }
 
 .home .single-post_image {

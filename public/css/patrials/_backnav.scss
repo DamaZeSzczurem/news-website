@@ -1,17 +1,18 @@
 .backnav{
-  width:30%;
   visibility: visible;
+  position:static;
   &_start-content{
     @include card--basic;
+    width: 30vw;
     border-top: solid $color--main 4vh;
   }
   &_popular{
     @include card--basic;
+    width: 30vw;
     a{
       text-decoration: none;
     }
     .popular{
-      
       &_post{
         @include card--basic;
         display: flex;
@@ -38,6 +39,7 @@
   }
  @include respond (medium){
    visibility: hidden;
+   position: absolute;
  }
 
 }

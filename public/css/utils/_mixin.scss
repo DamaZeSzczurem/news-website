@@ -1,5 +1,5 @@
 @mixin section-padding {
-  padding: 5vh 10vw;
+  padding: 5vh 5vw;
 }
 
 @mixin card--basic{
@@ -39,7 +39,7 @@
   color: $color-font--light;
   border-color: $color--main;
   width: 30%;
-  letter-spacing: 2px;;
+  letter-spacing: 2px;
   height: 4*$font-size--text--normal;
   font-size: 1.5rem;
   border-radius: 5px;
