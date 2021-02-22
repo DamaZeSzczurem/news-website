@@ -3,6 +3,9 @@
   &_posts-container{
     transition: all 1s;
     width: auto;
+    @include respond(medium){
+      width: 90vw;
+    }
   }
   &_single-post{
     @include card--basic;
@@ -15,9 +18,6 @@
       .heading--small{
       color: indigo;
       }
-    }
-    @include respond(medium){
-      width: 90vw;
     }
   }
   .single-post{
@@ -37,4 +37,5 @@
       }
     }
   }
+  
 }

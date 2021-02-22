@@ -24,32 +24,36 @@ function Post(title, content, author,image, postId){
   this.image=image;
   this.postId=postId;
   this.date= new Date();
-  this.views= 0;
+  this.views= 136;
 }
 //declare posts array
 
 let posts = [];
 let postsSorted = [];
 
+//Render home page
 app.get('/',(req,res)=>{
   sort();
   res.render('home',{content:homeStartingContent, posts:posts, postsSorted:postsSorted});
 });
-
+//Render about page
 app.get('/about',(req,res)=>{
   sort();
   res.render('about',{content:homeStartingContent,aboutContent:aboutContent,postsSorted:postsSorted});
 });
 
+//Render contact page
 app.get('/contact',(req,res)=>{
   sort();
   res.render('contact',{content:homeStartingContent,contactContent:contactContent, postsSorted:postsSorted});
 });
 
+//Render compose page
 app.get('/compose',(req,res)=>{
   res.render('compose',{});
 });
 
+//Take data from compose form ande store image in upload files
 app.post('/compose',upload.single('image'),(req,res)=>{
   const newPost= new Post(req.body.title, req.body.content, req.body.author,req.file.filename, postId);
   postId = postId +1;
@@ -57,6 +61,7 @@ app.post('/compose',upload.single('image'),(req,res)=>{
   res.redirect('/compose');
 })
 
+//View single post
 app.get('/post/:postId', function (req, res) {
   const viewPost = posts[req.params.postId];
   viewPost.views = viewPost.views +1;
@@ -68,6 +73,8 @@ app.listen(3000, function() {
   console.log("Server started on port 3000");
 });
 
+
+//function for the backNav popularity ranks
 function sort(){
   postsSorted = posts;
   postsSorted.sort((a, b)=>{return b.views - a.views});
