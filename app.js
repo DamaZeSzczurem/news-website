@@ -69,6 +69,10 @@ app.get('/post/:postId', function (req, res) {
   res.render('post',{post:viewPost,content:homeStartingContent, postsSorted:postsSorted});
 })
 
+app.get('/*',(req,res)=>{
+  res.render('err',{});
+});
+
 app.listen(3000, function() {
   console.log("Server started on port 3000");
 });
